@@ -75,13 +75,9 @@ export default ExampleComponent
 
 # Utils
 
-## `fetcher`
+## `Portal`
 
 ```tsx
-try {
-	const data = await fetcher("/api/data")
-	console.log("Data:", data)
-} catch (error) {
-	console.error("Error fetching data:", error)
-}
+import { Portal } from '@hyune/react/utils';
+  <Portal> Portal Test </Portal>
 ```
