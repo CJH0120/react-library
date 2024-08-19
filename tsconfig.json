@@ -1,0 +1,33 @@
+{
+	"compilerOptions": {
+		"declarationDir": "./dist/types",
+		"outDir": "./dist",
+		"lib": ["ESNext", "dom", "es2016", "es2017"],
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleDetection": "force",
+		"jsx": "react-jsx",
+		"allowJs": true,
+		"declaration": true,
+		"esModuleInterop": true,
+		"emitDeclarationOnly": true,
+		"moduleResolution": "bundler",
+		"verbatimModuleSyntax": true,
+		"noEmit": false,
+		"strict": true,
+		"skipLibCheck": true,
+		"noFallthroughCasesInSwitch": true,
+
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"noPropertyAccessFromIndexSignature": false,
+		"baseUrl": ".",
+		"paths": {
+			"@utils/*": ["src/utils/*"],
+			"@hooks/*": ["src/hooks/*"],
+			"@hyune/*": ["dist/types/*"]
+		}
+	},
+	"include": ["src/**/*"],
+	"exclude": ["src/__test__/*"]
+}

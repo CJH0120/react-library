@@ -1,0 +1,75 @@
+{
+	"name": "@hyune/react",
+	"version": "1.0.0",
+	"author": "cjh980120@gmail.com",
+	"description": "react utils library ",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/CJH0120/react-library"
+	},
+	"bugs": {
+		"url": "https://github.com/CJH0120/react-library/issues"
+	},
+	"keywords": [
+		"react",
+		"hooks",
+		"react-hook",
+		"ts",
+		"typescript",
+		"utils"
+	],
+	"type": "module",
+	"types": "dist/types/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"main": "dist/cjs/index.js",
+	"module": "dist/esm/index.js",
+	"exports": {
+		"./hooks": {
+			"types": "./dist/types/hooks/index.d.ts",
+			"import": "./dist/esm/hooks.js",
+			"require": "./dist/cjs/hooks.js"
+		},
+		"./utils": {
+			"types": "./dist/types/utils/index.d.ts",
+			"import": "./dist/esm/utils.js",
+			"require": "./dist/cjs/utils.js"
+		}
+	},
+	"directories": {
+		"example": "example"
+	},
+	"scripts": {
+		"build": "rm -rf dist && tsc  && rollup -c --bundleConfigAsCjs  && npm pack",
+		"prepare": "bun test"
+	},
+	"devDependencies": {
+		"@emotion/react": "^11.13.0",
+		"@happy-dom/global-registrator": "^14.12.3",
+		"@rollup/plugin-commonjs": "^26.0.1",
+		"@rollup/plugin-node-resolve": "^15.2.3",
+		"@rollup/plugin-typescript": "^11.1.6",
+		"@svgr/rollup": "^8.1.0",
+		"@testing-library/react": "^16.0.0",
+		"@types/bun": "latest",
+		"@types/react": "^18.3.3",
+		"@types/react-dom": "^18.3.0",
+		"rollup": "^4.20.0",
+		"rollup-plugin-dts": "^6.1.1",
+		"rollup-plugin-peer-deps-external": "^2.2.4",
+		"rollup-plugin-postcss": "^4.0.2",
+		"@testing-library/jest-dom": "^6.4.8",
+		"rollup-plugin-terser": "^7.0.2",
+		"@rollup/plugin-alias": "^5.1.0",
+		"autoprefixer": "^10.4.20",
+		"rollup-plugin-sass": "^1.13.2",
+		"rollup-plugin-scss": "^4.0.0"
+	},
+	"peerDependencies": {
+		"react": ">=18",
+		"react-dom": ">=18"
+	},
+	"dependencies": {}
+}
